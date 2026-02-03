@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://ekqkpbn84rn3"]
+
+[ext_resource type="Script" uid="uid://c02s06mcfyndf" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://dliwdsgwr1uh5" path="res://player.png" id="2_onrkg"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_onrkg"]
+friction = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(64, 64)
+
+[node name="Player" type="RigidBody2D"]
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_onrkg")
+lock_rotation = true
+script = ExtResource("1_4flbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
+target_position = Vector2(1200, 0)
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+target_position = Vector2(600, 0)
+
+[node name="Grapple" type="DampedSpringJoint2D" parent="."]
+node_a = NodePath("..")
+stiffness = 0.1
+damping = 0.01
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true

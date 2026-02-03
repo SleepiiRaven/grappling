@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://32uy01twyovj"]
+
+[ext_resource type="PackedScene" uid="uid://ekqkpbn84rn3" path="res://player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://g47sju73srq1" path="res://platform.tscn" id="2_fj7yv"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_f3sb7")]
+position = Vector2(239, 180)
+
+[node name="Platform" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(131, 224)
+
+[node name="Platform2" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(614, 228)
+
+[node name="Platform3" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(856, 222)
+
+[node name="Platform4" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(370, 243)
+
+[node name="Platform5" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(1091, 218)
+
+[node name="Platform6" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(1343, 231)
+
+[node name="Platform7" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(1597, 235)
+
+[node name="Platform8" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(1844, 186)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://g47sju73srq1"]
+
+[ext_resource type="Texture2D" uid="uid://besym1qf2ofqt" path="res://terrain.png" id="1_mi635"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mi635"]
+radius = 89.27486
+
+[node name="Platform" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mi635")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mi635")
